@@ -1,1 +1,24 @@
+DHCP Server Configuration (Packet Tracer)
 
+Device: Server-PT
+Interface: FastEthernet0
+IP Address: 192.168.1.5 /24
+Default Gateway: 192.168.1.1
+
+DHCP Pools:
+
+Pool Name: LAN_192.168.1.0
+Network: 192.168.1.0 /24
+Default Gateway: 192.168.1.1
+DNS Server: 8.8.8.8
+Excluded Addresses: 192.168.1.1 - 192.168.1.9
+
+Pool Name: LAN_192.168.3.0
+Network: 192.168.3.0 /24
+Default Gateway: 192.168.3.1
+DNS Server: 8.8.8.8
+Excluded Addresses: 192.168.3.1 - 192.168.3.9
+
+Notes:
+- DHCP requests from remote networks are forwarded via Router2 using ip helper-address.
+- The DHCP server is centralized in the 192.168.1.0/24 network.
